@@ -1,0 +1,29 @@
+format_version: 1.0.0
+
+name: osquery
+description: Package osquerybeat configuration
+version: 1.0.2
+title: OSQuery beat
+categories: ["logs"]
+type: integration
+license: basic
+release: beta
+
+datasources:
+  -
+    # Do we need a name for the data source?
+    name: osquery
+    title: OSQuery beat
+    description: Details about the data source.
+
+    # List of inputs this datasource supports
+    inputs:
+      -
+        # An id can be given, in case the type used here is not unique
+        # This is for selection in the stream
+        # id: nginx
+        type: osquery
+        description: Collecting data from OSQuery.
+
+        # Common configuration options for this input
+        vars:
